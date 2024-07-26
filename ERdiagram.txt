@@ -1,9 +1,13 @@
 erDiagram
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER ||--o{ INVOICE : "liable for"
-    DELIVERY-ADDRESS ||--o{ ORDER : receives
-    INVOICE ||--|{ ORDER : covers
-    ORDER ||--|{ ORDER-ITEM : includes
-    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
-    PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+    USER_ACCOUNT ||--o{ FILE : has
+    MOVIE ||--o{ FILE : has
+    MOVIE_GENRE ||--o{ GENRE : categorizes
+    MOVIE ||--o{ GENRE : includes
+    MOVIE ||--o{ CHARACTER : features
+    CHARACTER ||--o{ PERSON : portrayed_by
+    PERSON ||--o{ FILE : has
+    PERSON_PHOTOS ||--o{ PERSON : has
+    PERSON ||--o{ COUNTRY : resides_in
+    ACTOR_ROLES ||--o{ CHARACTER : plays
+    MOVIE ||--o{ PERSON : directed_by
+    FAVORITE_MOVIES ||--o{ USER_ACCOUNT : likes
